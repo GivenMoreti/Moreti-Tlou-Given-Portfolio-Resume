@@ -6,10 +6,10 @@
     <title>Portfolio</title>
   </head>
   <style>
-    body{
-      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
-       
-   background-color:black;
+    body {
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+      background-color: black;
     }
     .projects {
       display: flex;
@@ -33,57 +33,96 @@
       align-items: center;
       justify-content: space-around;
     }
-    .project1:hover{
- 
-        width:500px;
-        background-color: rgb(211, 148, 160);
+    .project1:hover {
+      background-color: rgb(211, 148, 160);
     }
     .header,
     a {
       text-decoration: none;
-      font-size: 1.1em;
+      font-size: 1.3em;
       color: crimson;
       font-weight: 900;
       text-align: center;
       margin: 10px;
     }
-    .header,a:hover{
-        color: green;
-        font-weight: bolder;
+    .header,
+    a:hover {
+      color: green;
+      font-weight: bolder;
     }
-    .footer{
-       
-     
-       width: 400px;
-       border:none;
-       border-radius: 10px;
-    
-        justify-content: center;
-        text-align: center;
-        background-color: #e7735e;
-        box-shadow:10px 15px 40px rgb(138, 87, 69);
+    .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Horizontally center contents */
+      justify-content: center; /* Vertically center contents */
+      text-align: center; /* Center text horizontally */
+      background-color: rgba(153, 57, 40, 0.1);
+      border-radius: 10px;
+      box-shadow: 10px 15px 40px rgb(138, 87, 69);
+      padding: 10px; /* Add some padding for spacing */
+      margin-top: 20px; /* Add margin to separate it from the projects section */
     }
-    input,placeholder,textarea{
-        border:none;
-        border-radius: 5px;
-        height: 40px;
-        margin: 2px;
-        width: 60%;
-        text-align: center;
-        color: black;
-       box-shadow: 20px 15px 40px rgb(138, 87, 69); 
+
+    input,
+    placeholder,
+    textarea {
+      border: none;
+      border-radius: 5px;
+      height: 40px;
+      margin: 2px;
+      width: 100%;
+      text-align: center;
+      color: black;
+      box-shadow: 20px 15px 40px rgb(138, 87, 69);
     }
-    #sendBtn{
-        background-color: crimson;
-        color: #fff;
-        font-size: 1.04em;
+    #sendBtn {
+      background-color: crimson;
+      color: #fff;
+      font-size: 1.04em;
+      box-shadow: 10px 20px 30px rgb(173, 47, 72);
     }
-    #sendBtn:hover{
-        color: crimson;
-        background-color: #fff;
+    #sendBtn {
+      background-color: crimson;
+      color: #fff;
+      font-size: 1.04em;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); /* Adding a subtle shadow */
+      cursor: pointer; /* Add a pointer cursor on hover to indicate interactivity */
+      transition: background-color 0.3s ease; /* Smooth color transition on hover */
     }
-    p,h1{
-        color:#fff;
+    p,
+    h1 {
+      color: #fff;
+    }
+    .socials,
+    a {
+      margin-top: 20px;
+      width: 100%;
+      height: 60px;
+      align-items: center;
+      padding: 10px;
+      border-radius: 0 0 10px 10px;
+      color: blue;
+    }
+    .socials,
+    a:hover {
+      color: blue;
+    }
+    .about,
+    .my-projects {
+      text-align: center;
+      width: 100%;
+    }
+    #profile-pic {
+      margin-top: 10px;
+      height: 200px;
+      border-radius: 100px;
+      margin-bottom: 10px;
+    }
+    embed {
+      border-radius: 10px;
     }
   </style>
   <body>
@@ -91,53 +130,82 @@
       <a href="#">Home</a>
       <a href="#projects">Projects</a>
       <a href="">Skills</a>
-      <a target="_blank"
+      <a
+        target="_blank"
         href="https://github.com/GivenMoreti/Moreti-Tlou-Given-Portfolio-Resume"
         >Resume</a
       >
     </div>
+    <!--  about me -->
+    <div class="about">
+      <h1>Tlou Given Moreti</h1>
+      <p>
+        Aspiring fullstack software engineer.I worked with Django framework due
+        t my love for Python. currently self-transitioning into mobile dev.<br />
+        React Native gives me more creative juices. See my<a
+          href="https://github.com/MoretiGiven"
+          target="_blank"
+          >github</a
+        >for more details. Working on an era defining collosal mobile app.
+      </p>
+      <img
+        id="profile-pic"
+        src="https://avatars.githubusercontent.com/u/91339082?v=4"
+        alt=""
+      />
+      <br />
+      <embed src="CV.pdf" width="800px" height="500px" />
+    </div>
 
+    <!-- projects starts here -->
+    <div class="my-projects">
+      <h1>P R O J E C T S</h1>
+    </div>
     <div class="projects">
       <div class="project1">
-        <a id="project"  target="_blank" href="https://github.com/GivenMoreti/Ecommerce_project"
+        <a
+          id="project"
+          target="_blank"
+          href="https://github.com/GivenMoreti/Ecommerce_project"
           >Ecommerce</a
         >
         <div class="details">
-          <p>
-            Ecommerce Application built with Django Web Framework
-          </p>
+          <p>Ecommerce Application built with Django Web Framework</p>
         </div>
       </div>
 
       <div class="project1">
-        <a id="project"  target="_blank" href="https://github.com/GivenMoreti/JobTrackerApp"
+        <a
+          id="project"
+          target="_blank"
+          href="https://github.com/GivenMoreti/JobTrackerApp"
           >JobTrackerApp</a
         >
         <div class="details">
-          <p>
-            Job Card Application built with Django Web Framework
-          </p>
+          <p>Job Card Application built with Django Web Framework</p>
         </div>
       </div>
 
       <div class="project1">
-        <a id="project" target="_blank" href="https://github.com/GivenMoreti/BookARoom"
+        <a
+          id="project"
+          target="_blank"
+          href="https://github.com/GivenMoreti/BookARoom"
           >Eproperty</a
         >
         <div class="details">
-          <p>
-            EProperty Application built with Django Web Framework
-          </p>
+          <p>EProperty Application built with Django Web Framework</p>
         </div>
       </div>
       <div class="project1">
-        <a id="project" target="_blank"  href="https://github.com/GivenMoreti/studypi"
+        <a
+          id="project"
+          target="_blank"
+          href="https://github.com/GivenMoreti/studypi"
           >Studypi</a
         >
         <div class="details">
-          <p>
-            Edusite Application built with Django Web Framework
-          </p>
+          <p>Edusite Application built with Django Web Framework</p>
         </div>
       </div>
     </div>
@@ -153,9 +221,10 @@
       </div>
       <div class="form">
         <form action="mailto:moretigiven@gmail.com" method="post">
-          <input type="text" placeholder="full names" maxlength="20"/> <br>
-          <input type="tel" placeholder="e.g. 0640822905" maxlength="10" /> <br>
-          <input type="email" placeholder="e.g. moretigiven@gmail.com" /> <br>
+          <input type="text" placeholder="full names" maxlength="20" /> <br />
+          <input type="tel" placeholder="e.g. 0640822905" maxlength="10" />
+          <br />
+          <input type="email" placeholder="e.g. moretigiven@gmail.com" /> <br />
           <textarea
             name=""
             id=""
@@ -163,33 +232,37 @@
             rows="10"
             placeholder="start typing"
           >
-          </textarea> <br>
-          <input id="sendBtn" type="button" value="Send">
+          </textarea>
+          <br />
+          <input id="sendBtn" type="button" value="Send" />
         </form>
+      </div>
+      <div class="socials">
+        <a href="">facebook</a>
+        <a href="">github</a>
+        <a href="">linkedin</a>
       </div>
     </div>
   </body>
 
   <script>
-    
     const inputs = document.querySelectorAll("input");
     const sendButton = document.getElementById("sendBtn");
     sendButton.addEventListener("click", (event) => {
-    event.preventDefault(); // Prevent form submission
-    let allFieldsFilled = true;
+      event.preventDefault(); // Prevent form submission
+      let allFieldsFilled = true;
 
-    inputs.forEach((input) => {
+      inputs.forEach((input) => {
         if (input.value.trim() === "") {
-            allFieldsFilled = false;
+          allFieldsFilled = false;
         }
-    });
+      });
 
-    if (allFieldsFilled) {
+      if (allFieldsFilled) {
         alert("Thanks for reaching out!");
-    } else {
+      } else {
         alert("Some fields are empty!");
-    }
-});
-
+      }
+    });
   </script>
 </html>
